@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1-0">
         <title>Your Notes</title>
@@ -48,6 +48,17 @@
             </div>
           </form>  
             
+           <form id="Form4">
+            <h3>INICIAR SESION</h3>
+            <input type="text" placeholder="Correo" required>
+            <input type="password" placeholder="Password" required>
+            
+            <div class="btn-box">
+                <button type="button" id="Ant3"> ANTERIOR </button>
+                <button type="Submit" > INICIAR </button>
+            </div>
+          </form>   
+            
             <div class="step-row">
                 <div id="progress"></div>
                 <div class="step-col"><small>Paso 1</small></div>
@@ -73,6 +84,12 @@
             Crear.onclick = function(){
                 Form0.style.left = "-450px";
                 Form1.style.left = "40px";
+                body.add('active');
+            }
+            Inicio.onclick = function(){
+                Form0.style.left = "450px";
+                Form4.style.left = "40px";
+                body.remove('active');
             }
              Ant0.onclick = function(){
                 Form0.style.left = "40px";
@@ -98,8 +115,11 @@
                 Form3.style.left = "450px";
                 progress.style.width = "240px";
             }
+             Ant3.onclick = function(){
+                Form0.style.left = "40px";
+                Form4.style.left = "-450px";
+            }
             
-        </script>
-        
+        </script>    
     <body>
 </html>    
